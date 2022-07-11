@@ -63,7 +63,7 @@
 // |        |       |       |     |     |   |     |     |     |     |     |       |      |
 //                  |       |     |     |   |     |     |     |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans   &trans    &trans     &trans    &trans    &to CM
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans   &trans    &trans     &trans    &trans    &tog 4
    &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &trans    
    &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &trans
                                         &trans       &trans  &trans  &trans   &trans    &trans
