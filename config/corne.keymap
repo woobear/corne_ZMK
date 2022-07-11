@@ -17,7 +17,7 @@
               compatible = "zmk,conditional-layers";
                tri_layer {
                   if-layers = <LOWER RAISE>;
-                  then-layer = <BT>;                };
+                  then-layer = <BT>;            
             };
         }; 
         keymap {
