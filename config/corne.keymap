@@ -84,7 +84,7 @@
                   &kp LGUI &mo 5 &kp SPACE   &kp RET &mo 6 &kp RALT
                         >;
                 };
-                              lower_layer {
+                              lower_layer_2 {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |  [  |   ]  |
@@ -97,7 +97,7 @@
                           	        &kp LGUI     &trans       &kp SPACE   &kp RET  &trans   &kp RALT
                         >;
                 };
-                raise_layer {
+                raise_layer_2 {
 // -----------------------------------------------------------------------------------------
 // | ESC |  F2 |  F3  |  F4 |  F5 |  F6 |   |  F7 |  F8 |  F9 | F10 | F11 | F12 | 
 // | F1  |     |      | DEL | HOME| END |   |     |     |     |     |     |     |
@@ -110,14 +110,14 @@
                     	     &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
                 };
-                                misc_layer {
+                                misc_layer_2 {
 // -----------------------------------------------------------------------------------------
 // | BTCLR  |  BT1  |  BT2  | BT3 |     |   |     |     |     |     |     |       |  CM  |
 // |        |       |       |     |     |   |     |     |     |     |     |       |      |
 // |        |       |       |     |     |   |     |     |     |     |     |       |      |
 //                  |       |     |     |   |     |     |     |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans   &trans    &trans     &trans    &trans    &tog 0
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans   &trans    &trans     &trans    &trans    &tog 4
    &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &trans    
    &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &trans
                                         &trans       &trans  &trans  &trans   &trans    &trans
