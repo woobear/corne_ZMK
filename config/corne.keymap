@@ -14,13 +14,6 @@
 #define CM   4
 
 / { 
-       conditional_layers {
-              compatible = "zmk,conditional-layers";
-               tri_layer {
-                  if-layers = <LOWER RAISE>;
-                  then-layer = <ML>;            
-            };
-        }; 
         keymap {
                 compatible = "zmk,keymap";
 
