@@ -74,13 +74,13 @@
                                 misc_layer {
 // -----------------------------------------------------------------------------------------
 // | BTCLR  |  BT1  |  BT2  | BT3 |     |   |     |     |     |     |     |       |  CM  |
-// |        |       |       |     |     |   |     |     |     |     |     |       |      |
 // |        |       |       |     |     |   |     |     |     |     |     |       |  QW  |
+// |        |       |       |     |     |   |     |     |     |     |     |       |      |
 //                  |       |     |     |   |     |     |     |
                         bindings = <
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans  &trans  &trans   &trans    &trans     &trans    &trans    &to 1
-   &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &trans    
-   &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &to 0
+   &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &to 0    
+   &trans     &trans       &trans       &trans       &trans  &trans  &trans   &trans    &trans     &trans    &trans    &trans
                                         &trans       &trans  &trans  &trans   &trans    &trans
                              	       
                         >;
