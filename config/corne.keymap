@@ -17,6 +17,9 @@
 
 
 / { 
+        chosen {
+		zmk,backlight;
+	};
         keymap {
                 compatible = "zmk,keymap";
 
