@@ -77,13 +77,13 @@
                 };
                                 misc_layer {
 // -----------------------------------------------------------------------------------------
-// | BTCLR |  BT1  |  BT2  | BT3   |      |   |     |     |     |     |     |       |  CM  |
-// |       |       |       |       |      |   |     |     |     |     |     |       |  QW  |
-// | RGBBU | RGBBD | RGBHU | RGBHD | RGBT |   |     |     |     |     |     |       |      |
+// | BTCLR |  BT1  |  BT2  | BT3   |       |   |     |     |     |     |     |       |  CM  |
+// |       |       |       |       | RGBEF |   |     |     |     |     |     |       |  QW  |
+// | RGBBU | RGBBD | RGBHU | RGBHD | RGBT  |   |     |     |     |     |     |       |      |
 //                  |       |     |     |   |     |     |     |
                         bindings = <
    &bt BT_CLR      &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans           &trans  &trans   &trans    &trans     &trans    &trans    &to 1
-   &trans          &trans           &trans           &trans           &trans           &trans  &trans   &trans    &trans     &trans    &trans    &to 0    
+   &trans          &trans           &trans           &trans           &rgb_ug RGB_EFF  &trans  &trans   &trans    &trans     &trans    &trans    &to 0    
    &rgb_ug RGB_BRI &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUI  &rgb_ug RGB_TOG  &trans  &trans   &trans    &trans     &trans    &trans    &trans
                                         &trans       &trans  &trans  &trans   &trans    &trans
                              	       
