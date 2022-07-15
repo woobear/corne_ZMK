@@ -18,7 +18,13 @@
 
 
 / { 
-	
+ 	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		tri_layer {
+		    if-layers = <2 3>;
+		    then-layer = <4>;
+		};
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -64,27 +70,27 @@
                 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC |  F2 |  F3  |  F4 |  F5 |  F6 |   |  F7 |  F8 |  F9 | F10 | F11 | F12 | 
-// | F1  |     |      | DEL | HOME| END |   |PRNT |     |     |     |     |     |
-// | SHFT |     |     |     | Vdwn|V_up |   |     |     |     |     |     |MISC |
+// | ESC |  F2 |  F3  |  F4 |  F5 |  F6 |   | F7  |  F8 |  F9 | F10 | F11 | F12 | 
+// | F1  |     |      | DEL | HOME| END |   | PRT |     |     |     |     |     |
+// | SHFT |     |     |     | Vdwn|V_up |   |     |     |     |     |     |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp ESC   &kp F2 &kp F3 &kp F4     &kp F5       &kp F6       &kp F7    &kp F8    &kp F9  &kp F10 &kp F11 &kp F12
    &kp F1    &trans &trans &kp DEL    &kp HOME     &kp END      &kp PSCRN    &trans    &trans  &trans  &trans  &trans
-   &kp LSHFT &trans &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans    &trans    &trans  &trans  &trans  &mo 4
+   &kp LSHFT &trans &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans    &trans    &trans  &trans  &trans  &trans
                     	     &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
                 };
                                 misc_layer {
 // -----------------------------------------------------------------------------------------
 // | BTCLR |  BT1  |  BT2  | BT3   |       |   |     |     |     |     |     |       |  CM  |
-// |       |       |       |       | RGBEF |   |     |     |     |     |     |       |  QW  |
-// | RGBBU | RGBBD | RGBHU | RGBHD | RGBT  |   |     |     |     |     |     |       |      |
+// |       |       |       |       | RGBEF |   |     |     |     |     |     |       |      |
+// | RGBBU | RGBBD | RGBHU | RGBHD | RGBT  |   |     |     |     |     |     |       |  QW  |
 //                  |       |     |     |   |     |     |     |
                         bindings = <
    &bt BT_CLR      &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans           &trans  &trans   &trans    &trans     &trans    &trans    &to 1
-   &trans          &trans           &trans           &trans           &rgb_ug RGB_EFF  &trans  &trans   &trans    &trans     &trans    &trans    &to 0    
-   &rgb_ug RGB_BRI &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUI  &rgb_ug RGB_TOG  &trans  &trans   &trans    &trans     &trans    &trans    &trans
+   &trans          &trans           &trans           &trans           &rgb_ug RGB_EFF  &trans  &trans   &trans    &trans     &trans    &trans    &trans    
+   &rgb_ug RGB_BRI &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUI  &rgb_ug RGB_TOG  &trans  &trans   &trans    &trans     &trans    &trans    &to 0
                                         &trans       &trans  &trans  &trans   &trans    &trans
                              	       
                         >;
