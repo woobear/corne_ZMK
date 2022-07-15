@@ -24,7 +24,7 @@
 		    if-layers = <2 3>;
 		    then-layer = <4>;
 		};
-
+	};
         keymap {
                 compatible = "zmk,keymap";
 
