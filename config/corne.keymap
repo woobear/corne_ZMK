@@ -16,6 +16,26 @@
 #define ML   4
 
 / {
+ behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+	td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -39,9 +59,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-   &kp TAB   &kp Q   &kp W     &kp E        &kp R      &kp T    &kp Y      &kp U      &kp I    &kp O     &kp P   &kp BSPC
- &kp LCTRL   &kp A   &kp S     &kp D        &kp F      &kp G    &kp H      &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
- &kp LSHFT   &kp Z   &kp X     &kp C        &kp V      &kp B    &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+   &kp TAB   &kp Q   &kp W     &kp E        &kp R      &kp T    &kp Y      &kp U      &kp I       &kp O    &kp P     &kp BSPC
+ &kp LCTRL   &kp A   &kp S     &hm LALT D   &hm LGUI F &kp G    &kp H      &hm RGUI J &hm RALT K  &kp L    &kp SEMI  &kp SQT
+ &kp LSHFT   &kp Z   &kp X     &kp C        &kp V      &kp B    &kp N      &kp M      &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
                             &kp LGUI  &lt 2 SPACE  &kp SPACE  &kp RET  &lt 3 RET   &kp RALT
             >;
         };
