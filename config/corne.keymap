@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -59,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-   &kp TAB   &kp Q   &kp W       &kp E        &kp R      &kp T    &kp Y      &kp U      &kp I       &kp O    &kp P     &kp BSPC
+   &td ESC TAB   &kp Q   &kp W       &kp E        &kp R      &kp T    &kp Y      &kp U      &kp I       &kp O    &kp P     &kp BSPC
  &kp LCTRL   &kp A   &hm LSHFT S &hm LALT D   &hm LGUI F &kp G    &kp H      &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
  &kp LSHFT   &kp Z   &kp X       &kp C        &kp V      &kp B    &kp N      &kp M      &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LGUI  &lt 2 SPACE  &kp SPACE  &kp RET  &lt 3 RET   &kp RALT
+                            &kp LGUI  &tog 2  &kp SPACE  &kp RET  &mo 3 RET   &kp RALT
             >;
         };
 
@@ -74,10 +74,10 @@
             //                    | GUI |     | SPC |   | ENT |      | ALT |
 
             bindings = <
-   &kp TAB   &kp Q   &kp W     &kp F   &kp P      &kp B    &kp J   &kp L      &kp U    &kp Y  &kp SEMI   &kp BSPC
+ &td ESC TAB   &kp Q   &kp W     &kp F   &kp P      &kp B    &kp J   &kp L      &kp U    &kp Y  &kp SEMI   &kp BSPC
  &kp LCTRL   &kp A   &kp R     &kp S   &kp T      &kp G    &kp M   &kp N      &kp E    &kp I     &kp O    &kp SQT
  &kp LSHFT   &kp Z   &kp X     &kp C   &kp D      &kp V    &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LGUI   &mo 2  &kp SPACE  &kp RET   &mo 3   &kp RALT
+                            &kp LGUI   &tog 2  &kp SPACE  &kp RET   &mo 3   &kp RALT
             >;
         };
 
@@ -89,10 +89,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &kp TAB  &td N1 EXCL  &kp N2    &kp N3             &kp N4                 &kp N5    &kp N6     &kp N7     &kp N8     &kp N9     &kp N0   &kp BSPC
-    &trans  &trans  &trans    &trans   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT     &trans     &trans
- &kp LSHFT  &trans  &trans    &trans  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS    &trans  &kp MINUS  &kp EQUAL   &kp BSLH  &kp GRAVE  &kp RSHFT
-                            &kp LGUI             &trans              &kp SPACE   &kp RET     &trans   &kp RALT
+   &kp TAB  &td EXCL N1  &td AT N2      &td HASH N3     &td DLLR N4        &td PCNT N5           &td CARET N6     &td AMPS N7 &td STAR N8  &kp N9     &kp N0   	 &kp BSPC
+    &trans  &trans  	 &trans         &trans   	&kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT   	  &kp DOWN    &kp UP       &kp RIGHT  &trans     &trans
+ &kp LSHFT  &trans  	 &trans         &trans  	&kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS &trans  	  &kp MINUS   &kp EQUAL    &kp BSLH   &kp GRAVE  &kp RSHFT
+                            &kp LGUI             &tog 0              &kp SPACE   &kp RET     &trans   &kp RALT
             >;
         };
 
