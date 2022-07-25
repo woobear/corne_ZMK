@@ -89,7 +89,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &kp TAB  &td EXCL N1  &td AT N2      &td HASH N3     &td DLLR N4        &td PCNT N5           &td CARET N6     &td AMPS N7 &td STAR N8  &kp N9     &kp N0   	 &kp BSPC
+   &kp TAB  &td EXCL N1  &td AT N2      &td HASH N3     &td DLLR N4        &td PRCNT N5          &td CARET N6    &td AMPS N7 &td STAR N8  &kp N9     &kp N0   	 &kp BSPC
     &trans  &trans  	 &trans         &trans   	&kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT   	  &kp DOWN    &kp UP       &kp RIGHT  &trans     &trans
  &kp LSHFT  &trans  	 &trans         &trans  	&kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS &trans  	  &kp MINUS   &kp EQUAL    &kp BSLH   &kp GRAVE  &kp RSHFT
                             &kp LGUI             &trans               &kp SPACE   &kp RET     &trans   &kp RALT
