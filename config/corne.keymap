@@ -29,7 +29,7 @@
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
