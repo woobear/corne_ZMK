@@ -35,6 +35,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+	td0: tap_dance_0 {
+            compatible  = "zmk,behavior-tap-dance";
+	    label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RALT(TAB)>, <&kp RC(RALT(TAB))>;
+        };
 	td1: tap_dance_1 {
             compatible  = "zmk,behavior-tap-dance";
 	    label = "TAP_DANCE_1";
@@ -77,7 +84,7 @@
  &td1        &kp Q   &kp W       &kp E        &kp R      &kp T    &kp Y      &kp U      &kp I       &kp O       &kp P          &kp BSPC
  &kp LCTRL   &hm LCTRL A   &hm LSHFT S &hm LALT D   &hm LGUI F &kp G    &kp H      &hm RGUI J &hm RALT K  &hm RSHFT L &hm RCTRL SEMI &kp SQT
  &kp LSHFT   &kp Z   &kp X       &kp C        &kp V      &kp B    &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH       &kp RSHFT
-                            &kp LGUI  &mo 2  &kp SPACE  &kp RET  &mo 3   &kp RALT
+                            &td0   &mo 2  &kp SPACE  &kp RET  &mo 3   &kp RALT
             >;
         };
 
@@ -92,7 +99,7 @@
  &kp TAB   &kp Q   &kp W     &kp F   &kp P      &kp B    &kp J   &kp L      &kp U    &kp Y  &kp SEMI   &kp BSPC
  &kp LCTRL   &kp A   &kp R     &kp S   &kp T      &kp G    &kp M   &kp N      &kp E    &kp I     &kp O    &kp SQT
  &kp LSHFT   &kp Z   &kp X     &kp C   &kp D      &kp V    &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LGUI   &mo 2  &kp SPACE  &kp RET   &mo 3   &kp RALT
+                            &td0   &mo 2  &kp SPACE  &kp RET   &mo 3   &kp RALT
             >;
         };
 
@@ -107,7 +114,7 @@
  &kp GRAVE &kp N1  &kp N2    &kp N3  		&kp N4             &kp N5                &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
  &trans    &trans  &trans    &kp LEFT_BRACKET   &kp LEFT_BRACE	&kp LEFT_PARENTHESIS  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp UNDER  &kp PLUS
  &kp LSHFT &trans  &trans    &kp RIGHT_BRACKET  &kp RIGHT_BRACE	&kp RIGHT_PARENTHESIS &trans     &kp MINUS  &kp EQUAL  &trans     &kp BSLH   &kp RSHFT
-                            &kp LGUI             &trans              &kp SPACE   &kp RET     &trans   &kp RALT
+                            &td0             &trans              &kp SPACE   &kp RET     &trans   &kp RALT
             >;
         };
 
@@ -121,8 +128,8 @@
             bindings = <
  &kp ESC  &kp F2  &kp F3      &kp F4        &kp F5        &kp F6     &kp F7  &kp F8    &kp F9  &kp F10  &kp F11  &kp F12
   &kp F2  &trans  &trans     &kp DEL      &kp HOME       &kp END  &kp PSCRN  &trans    &trans   &trans   &trans   &trans
-  &kp F1  &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP     &trans  &trans    &trans   &trans   &trans   &win_sleep
-                            &kp LGUI        &trans     &kp SPACE    &kp RET  &trans  &kp RALT
+  &kp F1  &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP     &trans  &trans    &trans   &trans   &trans   &trans
+                            &td0        &trans     &kp SPACE    &kp RET  &trans  &kp RALT
             >;
         };
 
