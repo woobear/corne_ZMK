@@ -110,7 +110,7 @@
  &trans    &kp N1     &kp N2          &kp N3  	         &kp N4             &kp N5                &kp N6     &kp N7     &kp N8     &kp N9       &kp N0     &trans
  &trans    &kp GRAVE  &trans          &kp LEFT_BRACKET   &kp LEFT_BRACE     &kp LEFT_PARENTHESIS  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT    &kp SQT    &trans
  &trans    &trans     &trans          &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &kp RIGHT_PARENTHESIS &trans     &kp MINUS  &kp EQUAL  &trans       &kp BSLH   &trans
-                                         &trans             &trans          &trans                &kp ESC    &trans     &trans
+                                         &trans             &trans          &trans                &kp ESC    &td0     &trans
             >;
         };
 
@@ -124,8 +124,8 @@
             bindings = <
   &trans  &kp F2  &kp F3     &kp F4       &kp F5         &kp F6        &kp F7     &kp F8    &kp F9    &kp F10  &kp F11  &trans
   &trans  &trans  &kp PSCRN  &kp DEL      &trans         &trans        &kp HOME   &kp PG_DN &kp PG_UP &kp END  &kp F12  &trans
-  &trans  &trans  &trans     &kp kC_MUTE  &kp C_VOL_DN   &kp C_VOL_UP  &trans     &trans    &trans    &trans   &trans   &trans
-                             &trans       &td0           &trans        &trans     &trans    &trans
+  &trans  &trans  &trans     &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP  &trans     &trans    &trans    &trans   &trans   &trans
+                             &trans       &trans           &trans        &trans     &trans    &trans
             >;
         };
 
