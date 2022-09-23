@@ -113,7 +113,7 @@
             bindings = <
  &kp GRAVE    &kp N1  &kp N2    &kp N3  	   &kp N4               &kp N5                &kp N6     &kp N7     &kp N8     &kp N9       &kp N0     &kp BSPC
  &trans       &trans  &trans    &kp LEFT_BRACKET   &kp LEFT_BRACE	&kp LEFT_PARENTHESIS  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT    &kp UNDER  &kp PLUS
- &trans       &trans  &LC(LGUI)    &kp RIGHT_BRACKET  &kp RIGHT_BRACE	&kp RIGHT_PARENTHESIS &td0       &kp MINUS  &kp EQUAL  &trans kp  &kp BSLH   &trans
+ &trans       &trans  &kp LC(LGUI)    &kp RIGHT_BRACKET  &kp RIGHT_BRACE	&kp RIGHT_PARENTHESIS &td0       &kp MINUS  &kp EQUAL  &trans   &kp BSLH   &trans
                             &trans            &trans              &kp SPACE   &kp RET     &trans   &kp RALT
             >;
         };
