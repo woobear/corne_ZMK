@@ -14,7 +14,7 @@
 #define LOWER   2
 #define RAISE   3
 #define ML   4
-#define COLemak 5
+
  
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -150,7 +150,7 @@
             //                  |       |     |     |   |     |     |     |
 
             bindings = <
-      &trans   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans               &trans           &trans &trans  &trans  &trans  &to 5   &trans
+      &trans   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans               &trans           &trans &trans  &trans  &trans  &to 1   &trans
       &trans   &bt BT_CLR       &trans           &trans           &trans               &trans           &trans &trans  &trans  &trans  &trans  &trans
       &trans   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD      &rgb_ug RGB_EFF  &trans &trans  &trans  &trans  &to 0   &trans
                                           &trans        &trans   &trans      &trans  &trans  &trans
