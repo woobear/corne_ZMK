@@ -14,6 +14,7 @@
 #define LOWER   2
 #define RAISE   3
 #define ML   4
+#define COLemak 5
  
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -77,7 +78,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-	    label = "QWERTY";
+	    label = " => QWERTY";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -93,6 +94,7 @@
         };
 
         colemak_layer {
+            label = " => Colemak";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
@@ -100,15 +102,15 @@
             //                    | GUI |     | SPC |   | ENT |      | ALT |
 
             bindings = <
- &kp TAB   &kp Q   &kp W     &kp F   &kp P      &kp B    &kp J   &kp L      &kp U    &kp Y  &kp SEMI   &kp BSPC
- &kp LCTRL   &kp A   &kp R     &kp S   &kp T      &kp G    &kp M   &kp N      &kp E    &kp I     &kp O    &kp SQT
- &kp LSHFT   &kp Z   &kp X     &kp C   &kp D      &kp V    &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &trans   &mo 2  &kp SPACE  &kp RET   &mo 3   &kp RALT
+ &trans   &kp Q   &kp W     &kp F   &kp P      &kp B      &kp J      &kp L      &kp U      &kp Y    &td1           &trans
+ &trans   &kp A   &kp R     &kp S   &kp T      &kp G      &kp M      &kp N      &kp E      &kp I    &kp O          &trans
+ &trans   &kp Z   &kp X     &kp C   &kp D      &kp V      &kp K      &kp H      &kp COMMA  &kp DOT  &hm RCTRL FSLH &trans
+                                    &trans     &lt 2 TAB  &kp SPACE  &kp RET    &lt 3 BKSP &trans
             >;
         };
 
         lower_layer {
-	    label = "Num/Nav";
+	    label = " => Num/Nav";
             // -----------------------------------------------------------------------------------------
             // |   `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |  _  |   +  |
@@ -124,7 +126,7 @@
         };
 
         raise_layer {
-	    label = "Func";
+	    label = " => Func";
             // -----------------------------------------------------------------------------------------
             // | ESC |  F2 |  F3  |  F4 |  F5 |  F6 |   | F7  |  F8 |  F9 | F10 | F11 | F12 | 
             // | F1  |     |      | DEL | HOME| END |   | PRT |     |     |     |     |     |
@@ -140,7 +142,7 @@
         };
 
         misc_layer {
-	    label = "Misc";
+	    label = " => Misc";
             // -----------------------------------------------------------------------------------------
             // | BTCLR |  BT1  |  BT2  | BT3   |       |   |     |     |     |     |     |       |  CM  |
             // |       |       |       |       | RGBEF |   |     |     |     |     |     |       |      |
@@ -148,9 +150,9 @@
             //                  |       |     |     |   |     |     |     |
 
             bindings = <
-      &trans   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans               &trans           &trans &trans  &trans  &trans  &trans   &to 1
-      &trans   &bt BT_CLR       &trans           &trans           &trans               &trans  &trans &trans  &trans  &trans  &trans  &trans
-      &trans   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD      &rgb_ug RGB_EFF  &trans &trans  &trans  &trans  &trans   &to 0
+      &trans   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans               &trans           &trans &trans  &trans  &trans  &to 5   &trans
+      &trans   &bt BT_CLR       &trans           &trans           &trans               &trans           &trans &trans  &trans  &trans  &trans  &trans
+      &trans   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD      &rgb_ug RGB_EFF  &trans &trans  &trans  &trans  &to 0   &trans
                                           &trans        &trans   &trans      &trans  &trans  &trans
             >;
         };
