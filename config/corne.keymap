@@ -138,7 +138,7 @@
  &trans    &kp N1     &kp N2          &kp N3  	         &kp N4             &kp N5                &kp N6     &kp N7     &kp N8     &kp N9       &kp N0     &trans
  &trans    &kp GRAVE  &trans          &kp LEFT_BRACKET   &kp LEFT_BRACE     &kp LEFT_PARENTHESIS  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT    &kp UNDER  &trans
  &trans    &trans     &trans          &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &kp RIGHT_PARENTHESIS &td0       &kp MINUS  &kp EQUAL  &trans       &kp BSLH   &trans
-                                         &trans             &trans          &trans                &kp ESC    &trans     &trans
+                                         &trans             &trans          &trans                &kp ESC    &caps_word     &trans
             >;
         };
 
@@ -167,7 +167,7 @@
             //                  |       |     |     |   |     |     |     |
 
             bindings = <
-      &trans   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans               &trans           &trans &trans  &trans  &trans  &to 1   &trans
+      &trans   &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &bt BT_SEL 2     &trans               &trans           &trans &trans  &trans  &trans  &to 1   &trans
       &trans   &bt BT_CLR       &trans           &trans           &trans               &trans           &trans &trans  &trans  &trans  &to 2   &trans
       &trans   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD      &rgb_ug RGB_EFF  &trans &trans  &trans  &trans  &to 0   &trans
                                           &trans        &trans   &trans      &trans  &trans  &trans
