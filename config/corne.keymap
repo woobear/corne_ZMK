@@ -91,8 +91,9 @@
  &trans   &kp Q         &kp W       &kp E        &kp R      &kp T      &kp Y      &kp U      &kp I       &kp O       &kp P          &trans
  &trans   &hm LCTRL A   &hm LSHFT S &hm LALT D   &hm LGUI F &kp G      &kp H      &hm RGUI J &hm RALT K  &hm RSHFT L &td1           &trans
  &trans   &kp Z         &kp X       &kp C        &kp V      &kp B      &kp N      &kp M      &kp COMMA   &kp DOT     &hm RCTRL FSLH &trans
-                                    &trans       &lt 3 TAB  &kp SPACE  &kp RET    &lt 4 BKSP &trans
+                                    &kp C_MUTE   &lt 3 TAB  &kp SPACE  &kp RET    &lt 4 BKSP &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         colemak_layer {
@@ -138,7 +139,7 @@
  &trans    &kp N1     &kp N2          &kp N3  	         &kp N4             &kp N5                &kp N6     &kp N7     &kp N8     &kp N9       &kp N0     &trans
  &trans    &kp GRAVE  &trans          &kp LEFT_BRACKET   &kp LEFT_BRACE     &kp LEFT_PARENTHESIS  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT    &kp UNDER  &trans
  &trans    &trans     &trans          &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &kp RIGHT_PARENTHESIS &td0       &kp MINUS  &kp EQUAL  &trans       &kp BSLH   &trans
-                                         &trans             &trans          &trans                &kp ESC    &caps_word     &trans
+                                         &trans             &trans          &trans                &kp ESC    &trans     &trans
             >;
         };
 
@@ -153,9 +154,10 @@
             bindings = <
   &trans  &kp F2  &kp F3     &kp F4       &kp F5         &kp F6        &kp F7     &kp F8    &kp F9    &kp F10  &kp F11  &trans
   &trans  &trans  &kp PSCRN  &kp DEL      &trans         &trans        &kp HOME   &kp PG_DN &kp PG_UP &kp END  &kp F12  &trans
-  &trans  &trans  &trans     &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP  &trans     &trans    &trans    &trans   &trans   &trans
-                             &trans       &trans           &trans        &trans     &trans    &trans
+  &trans  &trans  &trans     &trans       &trans         &trans        &trans     &trans    &trans    &trans   &trans   &trans
+                             &kp LG(TAB)  &trans         &caps_word        &trans     &trans    &trans
             >;
+            sensor-bindings = <&inc_dec_kp LC(LG(LEFT)) LC(LG(RIGHT))>;
         };
 	
         misc_layer {
