@@ -13,11 +13,8 @@
 #
 ---
 include:
-  # ZMK Studio runs on the central half only.
   - board: nice_nano//zmk
     shield: corne_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk
     shield: corne_right
   - board: nice_nano//zmk
