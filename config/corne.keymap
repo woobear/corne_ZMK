@@ -91,6 +91,11 @@
     combos {
         compatible = "zmk,combos";
 
+        // Mirrored ring+middle pairs, opening on the left, closing on the right:
+        //   row0   W+F -> [     U+Y -> ]
+        //   row1   R+S -> (     E+I -> )
+        //   row2   X+C -> {     ,+. -> }
+
         left_bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <2 3>;
@@ -100,27 +105,31 @@
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <14 15>;
+            layers = <0>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <26 27>;
+            layers = <0>;
         };
 
         right_bracket {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp RIGHT_BRACKET>;
             key-positions = <8 9>;
             layers = <0>;
         };
 
         right_para {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <21 20>;
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <20 21>;
+            layers = <0>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <26 27 32 33>;
+            key-positions = <32 33>;
+            layers = <0>;
         };
     };
 
