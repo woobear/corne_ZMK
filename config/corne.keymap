@@ -22,13 +22,24 @@
 
 / {
     behaviors {
+        // Tuned to minimise accidental mod activation. Without positional
+        // hold-tap (single behavior, both hands) the defence is entirely in
+        // the timings:
+        //   tap-preferred        - an interrupting keypress NEVER forces a
+        //                          hold, so same-hand rolls can't misfire
+        //   require-prior-idle   - pressed <150ms after any other key it
+        //                          resolves to a tap instantly, killing
+        //                          misfires while typing at speed
+        //   tapping-term 280     - a hold has to be deliberate
+        //   quick-tap 175        - re-tapping the same key stays a tap
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -124,12 +135,17 @@
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
             // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT |
             //                    | GUI |     | SPC |   | ENT |      | ALT |
+            //
+            // Home row mods (hold), mirrored pinky -> index.
+            // Right pinky is plain O; RCTRL lives on / instead.
+            //         CTRL SHFT ALT  GUI              GUI  ALT  SHFT  --
+            //          A    R    S    T                N    E    I    O
 
             bindings = <
-&trans  &kp Q  &kp W  &kp F   &kp P      &kp B      &kp J    &kp L       &kp U      &kp Y    &td1            &trans
-&trans  &kp A  &kp R  &kp S   &kp T      &kp G      &kp M    &kp N       &kp E      &kp I    &kp O           &trans
-&trans  &kp Z  &kp X  &kp C   &kp D      &kp V      &kp K    &kp H       &kp COMMA  &kp DOT  &hm RCTRL FSLH  &trans
-                      &trans  &lt 1 TAB  &kp SPACE  &kp RET  &lt 2 BKSP  &trans
+&trans  &kp Q        &kp W        &kp F       &kp P       &kp B      &kp J    &kp L       &kp U       &kp Y        &td1            &trans
+&trans  &hm LCTRL A  &hm LSHFT R  &hm LALT S  &hm LGUI T  &kp G      &kp M    &hm RGUI N  &hm RALT E  &hm RSHFT I  &kp O           &trans
+&trans  &kp Z        &kp X        &kp C       &kp D       &kp V      &kp K    &kp H       &kp COMMA   &kp DOT      &hm RCTRL FSLH  &trans
+                                  &trans      &lt 1 TAB   &kp SPACE  &kp RET  &lt 2 BKSP  &trans
             >;
         };
 
