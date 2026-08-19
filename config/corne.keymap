@@ -32,6 +32,7 @@
         //                          misfires while typing at speed
         //   tapping-term 280     - a hold has to be deliberate
         //   quick-tap 175        - re-tapping the same key stays a tap
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -66,7 +67,14 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RA(TAB)>, <&kp RC(RA(TAB))>;
+            bindings = <&kp Q>, <&kp ESCAPE>;
+        };
+
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <UNDERSCORE>;
         };
     };
 
@@ -75,7 +83,7 @@
 
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 
@@ -131,6 +139,11 @@
             key-positions = <32 33>;
             layers = <0>;
         };
+
+        esc_combo {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
     };
 
     keymap {
@@ -151,7 +164,7 @@
             //          A    R    S    T                N    E    I    O
 
             bindings = <
-&trans  &kp Q        &kp W        &kp F       &kp P       &kp B      &kp J    &kp L       &kp U       &kp Y        &td1            &trans
+&trans  &td0         &kp W        &kp F       &kp P       &kp B      &kp J    &kp L       &kp U       &kp Y        &td1            &trans
 &trans  &hm LCTRL A  &hm LSHFT R  &hm LALT S  &hm LGUI T  &kp G      &kp M    &hm RGUI N  &hm RALT E  &hm RSHFT I  &kp O           &trans
 &trans  &kp Z        &kp X        &kp C       &kp D       &kp V      &kp K    &kp H       &kp COMMA   &kp DOT      &hm RCTRL FSLH  &trans
                                   &trans      &lt 1 TAB   &kp SPACE  &kp RET  &lt 2 BKSP  &trans
@@ -185,13 +198,22 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp F2  &kp F3     &kp F4       &kp F5  &kp F6      &kp F7    &kp F8     &kp F9     &kp F10  &kp F11  &trans
-&trans  &trans  &kp PSCRN  &kp DEL      &trans  &trans      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END  &kp F12  &trans
-&trans  &trans  &trans     &trans       &trans  &trans      &trans    &trans     &trans     &trans   &trans   &trans
+&trans  &kp F2  &kp F3     &kp F4       &kp F5  &kp F6      &kp F7    &kp F8     &kp F9     &kp F10  &kp F11     &trans
+&trans  &kp F1  &kp PSCRN  &kp DEL      &trans  &trans      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END  &kp F12     &trans
+&trans  &trans  &trans     &trans       &trans  &trans      &trans    &trans     &trans     &trans   &kp RC(F5)  &trans
                            &kp LG(TAB)  &trans  &caps_word  &trans    &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LG(LEFT)) LC(LG(RIGHT))>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp PRINTSCREEN   &trans             &trans                &trans                &trans              &trans                 &trans  &trans
+&trans  &trans      &trans        &trans        &kp LC(LG(LEFT))  &kp LC(RG(RIGHT))  &kp LS(LA(LG(LEFT)))  &kp LS(LC(LG(DOWN)))  &kp LS(LC(LG(UP)))  &kp LS(LC(LG(RIGHT)))  &trans  &trans
+&trans  &trans      &trans        &trans        &trans            &trans             &trans                &trans                &trans              &trans                 &trans  &trans
+                                  &trans        &trans            &trans             &trans                &trans                &trans
+            >;
         };
 
         misc_layer {
