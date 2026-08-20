@@ -1,4 +1,5 @@
 /*
+spawn-at-startup "vesktop" 
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -207,8 +208,8 @@
 
         layer_4 {
             bindings = <
-&trans  &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp PRINTSCREEN   &trans             &trans                &trans                &trans              &trans                 &trans  &trans
-&trans  &trans      &trans        &trans        &kp LC(LG(LEFT))  &kp LC(RG(RIGHT))  &kp LS(LA(LG(LEFT)))  &kp LS(LC(LG(DOWN)))  &kp LS(LC(LG(UP)))  &kp LS(LC(LG(RIGHT)))  &trans  &trans
+&trans  &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp PSCRN   &trans             &trans                &trans                &trans              &trans                 &trans  &trans
+&trans  &trans      &trans        &trans        &kp LC(LG(LEFT))  &kp LC(RG(RIGHT))  &kp LS(LC(LG(LEFT)))  &kp LS(LC(LG(DOWN)))  &kp LS(LC(LG(UP)))  &kp LS(LC(LG(RIGHT)))  &trans  &trans
 &trans  &trans      &trans        &trans        &trans            &trans             &trans                &trans                &trans              &trans                 &trans  &trans
                                   &trans        &trans            &trans             &trans                &trans                &trans
             >;
