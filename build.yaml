@@ -13,9 +13,15 @@
 #
 ---
 include:
+  - board: xiao_ble
+    shield: corne_dongle prospector_adapter
+
   - board: nice_nano//zmk
     shield: corne_left
   - board: nice_nano//zmk
     shield: corne_right
+
+  - board: xiao_ble 
+    shield: settings_reset
   - board: nice_nano//zmk
     shield: settings_reset
