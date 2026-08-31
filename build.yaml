@@ -16,10 +16,14 @@ include:
   - board: xiao_ble//zmk
     shield: corne_dongle prospector_adapter
 
+  # The dongle is the central, so both halves build as peripherals.
+  # Drop these cmake-args to go back to a standalone left/right pair.
   - board: nice_nano//zmk
     shield: corne_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano//zmk
     shield: corne_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   - board: xiao_ble//zmk
     shield: settings_reset

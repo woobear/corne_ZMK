@@ -12,7 +12,16 @@ config ZMK_SPLIT
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+# Two halves.
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
+
+# Peripherals + BLE profiles (5). ZMK's default is 6, which only allows for a
+# single peripheral -- see app/src/split/bluetooth/Kconfig.defaults.
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
 
 endif
