@@ -149,7 +149,7 @@ spawn-at-startup "vesktop"
         compatible = "zmk,keymap";
 
         colemak_layer {
-            label = "Colemak";
+            display-name = "Colemak";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
@@ -171,7 +171,7 @@ spawn-at-startup "vesktop"
         };
 
         lower_layer {
-            label = "Num/Nav";
+            display-name = "Num/Nav";
 
             // -----------------------------------------------------------------------------------------
             // |   `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -188,7 +188,7 @@ spawn-at-startup "vesktop"
         };
 
         raise_layer {
-            label = "Func";
+            display-name = "Func";
 
             // -----------------------------------------------------------------------------------------
             // | ESC |  F2 |  F3  |  F4 |  F5 |  F6 |   | F7  |  F8 |  F9 | F10 | F11 | F12 | 
@@ -207,6 +207,8 @@ spawn-at-startup "vesktop"
         };
 
         layer_4 {
+            display-name = "Media";
+
             bindings = <
 &trans  &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp PSCRN   &trans             &trans                &trans                &trans              &trans                 &trans  &trans
 &trans  &trans      &trans        &trans        &kp LC(LG(LEFT))  &kp LC(RG(RIGHT))  &kp LS(LC(LG(LEFT)))  &kp LS(LC(LG(DOWN)))  &kp LS(LC(LG(UP)))  &kp LS(LC(LG(RIGHT)))  &trans  &trans
