@@ -29,24 +29,3 @@ include:
     shield: settings_reset
   - board: nice_nano//zmk
     shield: settings_reset
-
-  # ---- temporary diagnostics for the silent right half ----
-  # Remove both once it is working.
-
-  # Right half as a plain USB keyboard: no split, no BLE peer, no dongle.
-  # If shorting its pins types over USB, the matrix and controller are fine
-  # and the fault is in the split link. If it types nothing, the fault is
-  # the controller itself.
-  - board: nice_nano//zmk
-    shield: corne_right
-    cmake-args: -DCONFIG_ZMK_SPLIT=n
-    artifact-name: corne_right-standalone
-
-  # Dongle with USB logging, to see whether it ever subscribes to the right
-  # half's key events. The startup delay holds the log thread so boot-time
-  # split discovery is still in the buffer when you attach a terminal.
-  - board: xiao_ble//zmk
-    shield: corne_dongle prospector_adapter
-    snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
-    artifact-name: corne_dongle-logging
