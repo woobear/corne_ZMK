@@ -14,6 +14,6 @@
 
 / {
     chosen {
-        zmk,prospector-theme = &prospector_green_theme;
+        zmk,prospector-theme = &prospector_purple_theme;
     };
 };

@@ -79,7 +79,7 @@ spawn-at-startup "vesktop"
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-
+   
         tri_layer {
             if-layers = <1 2>;
             then-layer = <4>;
@@ -182,7 +182,7 @@ spawn-at-startup "vesktop"
             bindings = <
 &trans  &kp N1     &kp N2     &kp N3            &kp N4        &kp N5                 &kp N6       &kp N7       &kp N8      &kp N9     &kp N0         &trans
 &trans  &kp GRAVE  &kp EQUAL  &kp GREATER_THAN  &kp PLUS      &kp MINUS              &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT  &kp UNDER      &trans
-&trans  &kp TILDE  &kp HASH   &kp LESS_THAN     &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp PERCENT  &kp DOLLAR  &kp PIPE   &kp BACKSLASH  &trans
+&trans  &kp TILDE  &kp HASH   &kp LESS_THAN     &kp ASTERISK  &kp EXCL  &kp AT_SIGN  &kp PERCENT  &kp DOLLAR  &kp PIPE   &kp BACKSLASH  &trans
                               &trans            &trans        &trans                 &kp ESC      &trans       &trans
             >;
         };
@@ -212,7 +212,7 @@ spawn-at-startup "vesktop"
             bindings = <
 &trans  &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp PSCRN   &trans             &trans                &trans                &trans              &trans                 &trans  &trans
 &trans  &trans      &trans        &trans        &kp LC(LG(LEFT))  &kp LC(RG(RIGHT))  &kp LS(LC(LG(LEFT)))  &kp LS(LC(LG(DOWN)))  &kp LS(LC(LG(UP)))  &kp LS(LC(LG(RIGHT)))  &trans  &trans
-&trans  &trans      &trans        &trans        &trans            &trans             &trans                &trans                &trans              &trans                 &trans  &trans
+&trans  &trans      &trans        &trans        &trans            &trans             &kp LS(LG(LEFT))  &kp LS(LG(DOWN))  &kp LS(LG(UP))  &kp LS(LG(RIGHT))  &trans  &trans
                                   &trans        &trans            &trans             &trans                &trans                &trans
             >;
         };
