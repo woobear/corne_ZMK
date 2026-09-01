@@ -17,13 +17,19 @@ include:
     shield: corne_dongle prospector_adapter
 
   # The dongle is the central, so both halves build as peripherals.
-  # Drop these cmake-args to go back to a standalone left/right pair.
+  # Drop ZMK_SPLIT_ROLE_CENTRAL=n to go back to a standalone left/right pair.
+  #
+  # ZMK_SLEEP is off by default and nice!nano does not enable it, so without
+  # this the halves never deep sleep. It lives here rather than in a .conf
+  # because corne.conf is merged after corne_dongle.conf and would override
+  # the dongle's own ZMK_SLEEP=n; a cmake-arg outranks both and applies only
+  # to the target it is written on.
   - board: nice_nano//zmk
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SLEEP=y
   - board: nice_nano//zmk
     shield: corne_right
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SLEEP=y
 
   - board: xiao_ble//zmk
     shield: settings_reset
