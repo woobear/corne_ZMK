@@ -1,0 +1,19 @@
+/*
+ * Dongle config overlay.
+ *
+ * This file, rather than the shield's own overlay, because the four theme
+ * nodes are defined in the prospector_adapter shield overlay -- which is
+ * processed after corne_dongle's. cmake appends the ZMK config overlay last
+ * (post_boards_shields.cmake), so the label is guaranteed to exist by the
+ * time this reference is resolved.
+ *
+ * Swap in prospector_blue_theme, prospector_red_theme or
+ * prospector_purple_theme for a different palette. With no chosen node at
+ * all the module falls back to blue.
+ */
+
+/ {
+    chosen {
+        zmk,prospector-theme = &prospector_green_theme;
+    };
+};
