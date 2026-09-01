@@ -1,6 +1,10 @@
 /*
  * Dongle config overlay.
  *
+ * NOTE: currently inert. Only the Radii status screen reads this theme;
+ * the Classic layout in use now hardcodes its palette. Kept so switching
+ * back to Radii restores the chosen colours.
+ *
  * This file, rather than the shield's own overlay, because the four theme
  * nodes are defined in the prospector_adapter shield overlay -- which is
  * processed after corne_dongle's. cmake appends the ZMK config overlay last
