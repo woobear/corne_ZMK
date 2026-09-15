@@ -30,11 +30,13 @@ spawn-at-startup "vesktop"
         //                          the tapping term the way tap-preferred did
         //   tapping-term 180     - fallback for a hold with nothing pressed
         //                          after it; was 280
-        //   require-prior-idle   - pressed <125ms after another key it is a tap
+        //   require-prior-idle   - pressed <80ms after another key it is a tap
         //                          instantly, which is what stops fast typing
-        //                          from throwing modifiers. Was 150; lower it
-        //                          further if reaching for a mod right after a
-        //                          letter still gives the letter.
+        //                          from throwing modifiers. Was 150, then 125;
+        //                          at 125 shift right after a space or letter
+        //                          (capitalising mid-sentence) gave R about
+        //                          half the time. If A/S/T/N/E/I start throwing
+        //                          mods mid-word, raise it back toward 100.
         //   quick-tap 175        - re-tapping the same key stays a tap
 
         hm: homerow_mods {
@@ -44,7 +46,7 @@ spawn-at-startup "vesktop"
             flavor = "balanced";
             tapping-term-ms = <180>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <80>;
             bindings = <&kp>, <&kp>;
         };
 
